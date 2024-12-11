@@ -56,5 +56,11 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "First-lesson-project.sln"
+    "dotnet.defaultSolution": "First-lesson-project.sln",
+    "[csharp]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true
+    },
+    "editor.defaultFormatter": "ms-dotnettools.csharp",
+    "editor.formatOnSave": true
 }
