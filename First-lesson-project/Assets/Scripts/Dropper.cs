@@ -5,6 +5,7 @@ public class Dropper : MonoBehaviour
 	[SerializeField]float timeToWait = 2f;
 	MeshRenderer myMeshRenderer;
 	Rigidbody rigidbody;
+	
 
 	void Start()
 	{

@@ -6,6 +6,11 @@ public class FlyAtPlayer : MonoBehaviour
 	[SerializeField] Transform player;
 	Vector3 playerPosition;
 
+	void Awake()
+	{
+		gameObject.SetActive(false);
+	}
+
 	void Start()
 	{
 		playerPosition = player.transform.position;
@@ -24,7 +29,7 @@ public class FlyAtPlayer : MonoBehaviour
 
 	void DestroyWhenReached()
 	{
-		if(transform.position == playerPosition)
+		if (transform.position == playerPosition)
 		{
 			Destroy(gameObject);
 		}

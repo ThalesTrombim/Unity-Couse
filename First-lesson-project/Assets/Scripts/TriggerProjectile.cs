@@ -2,13 +2,17 @@ using UnityEngine;
 
 public class TriggerProjectile : MonoBehaviour
 {
-	void Start()
+	[SerializeField] GameObject[] projectiles;
+	void OnTriggerEnter(Collider other)
 	{
-		
-	}
+		if (other.gameObject.tag == "Player")
+		{
+			foreach (GameObject projectile in projectiles)
+			{
+				projectile.SetActive(true);
+				Destroy(gameObject);
+			}
 
-	void Update()
-	{
-		
+		}
 	}
 }
