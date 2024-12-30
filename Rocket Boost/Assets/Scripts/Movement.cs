@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour
@@ -7,12 +8,14 @@ public class Movement : MonoBehaviour
 	[SerializeField] InputAction rotation;
 	[SerializeField] float thrustStrength = 1000f;
 	[SerializeField] float rotationStrength = 100f;
-  
-	new Rigidbody rigidbody;
+
+  AudioSource audioSource;
+	Rigidbody rigidbody;
 
 	void Start()
 	{
 		rigidbody = GetComponent<Rigidbody>();
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	void OnEnable()
@@ -30,12 +33,25 @@ public class Movement : MonoBehaviour
 	private void ProcessThrust()
 	{
 		if (thrust.IsPressed())
-		{
-			rigidbody.AddRelativeForce(Vector3.up * thrustStrength * Time.fixedDeltaTime);
-		}
-	}
+    {
+      rigidbody.AddRelativeForce(Vector3.up * thrustStrength * Time.fixedDeltaTime);
 
-	void ProcessRotation()
+      PlaySFX();
+    } else
+		{
+			audioSource.Stop();
+		}
+  }
+
+  private void PlaySFX()
+  {
+    if (!audioSource.isPlaying)
+    {
+      audioSource.Play();
+    }
+  }
+
+  void ProcessRotation()
 	{
 		float rotationInput = rotation.ReadValue<float>();
 

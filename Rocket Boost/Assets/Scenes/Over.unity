@@ -467,6 +467,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Launch Pad (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2469064958301668445, guid: 183ac7ceffb1fff46a7851a1a4351afb, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     - target: {fileID: 2956667941642297063, guid: 183ac7ceffb1fff46a7851a1a4351afb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.674444
@@ -699,6 +703,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Launch Pad
       objectReference: {fileID: 0}
+    - target: {fileID: 2469064958301668445, guid: 183ac7ceffb1fff46a7851a1a4351afb, type: 3}
+      propertyPath: m_TagString
+      value: Friendly
+      objectReference: {fileID: 0}
     - target: {fileID: 2956667941642297063, guid: 183ac7ceffb1fff46a7851a1a4351afb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.52177
@@ -848,34 +856,6 @@ PrefabInstance:
     - target: {fileID: 710704410540990112, guid: e5b9406046329674fa8b2b808af8a12a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6225376644508666284, guid: e5b9406046329674fa8b2b808af8a12a, type: 3}
-      propertyPath: m_Size.x
-      value: 2.29
-      objectReference: {fileID: 0}
-    - target: {fileID: 6225376644508666284, guid: e5b9406046329674fa8b2b808af8a12a, type: 3}
-      propertyPath: m_Center.y
-      value: 1.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 6225376644508666284, guid: e5b9406046329674fa8b2b808af8a12a, type: 3}
-      propertyPath: m_Center.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6546006147557005626, guid: e5b9406046329674fa8b2b808af8a12a, type: 3}
-      propertyPath: thrustStrength
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 6546006147557005626, guid: e5b9406046329674fa8b2b808af8a12a, type: 3}
-      propertyPath: rotationStrength
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6698534141904404527, guid: e5b9406046329674fa8b2b808af8a12a, type: 3}
-      propertyPath: m_Drag
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6698534141904404527, guid: e5b9406046329674fa8b2b808af8a12a, type: 3}
-      propertyPath: m_Constraints
-      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 7659868264937340678, guid: e5b9406046329674fa8b2b808af8a12a, type: 3}
       propertyPath: m_Name
