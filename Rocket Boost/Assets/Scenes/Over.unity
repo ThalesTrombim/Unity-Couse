@@ -857,6 +857,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1091477409419177606, guid: e5b9406046329674fa8b2b808af8a12a, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1091477409419177606, guid: e5b9406046329674fa8b2b808af8a12a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546006147557005626, guid: e5b9406046329674fa8b2b808af8a12a, type: 3}
+      propertyPath: mainEngine
+      value: 
+      objectReference: {fileID: 8300000, guid: e75fbcd424e23fa48af5995fd0c84737, type: 3}
     - target: {fileID: 7659868264937340678, guid: e5b9406046329674fa8b2b808af8a12a, type: 3}
       propertyPath: m_Name
       value: Player Rocket

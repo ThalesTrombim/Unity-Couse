@@ -6,27 +6,54 @@ using UnityEngine.SceneManagement;
 public class CollisionHandler : MonoBehaviour
 {
 	// int currentScene = SceneManager.GetActiveScene().buildIndex;
+	[SerializeField] float delay = 2f;
+	[SerializeField] AudioClip crashSFX;
+	[SerializeField] AudioClip successSFX;
+
+	AudioSource audioSource;
+
+	bool isControllable = true; 
+
+	void Start()
+	{
+		audioSource = GetComponent<AudioSource>();
+	}
 
 	void OnCollisionEnter(Collision other)
 	{
+		if(!isControllable) { return; }
+
 		switch (other.gameObject.tag)
 		{
 			case "Friendly":
-				Debug.Log("This is a friendly object");
 				break;
 			case "Finish":
-				GoToNextLevel();
+				StartSuccessSequence();
 				break;
       default:
 			  StartCrashSequence();
-				Invoke("ReloadLevel", 2f);
         break;
     }
   }
 
+  private void StartSuccessSequence()
+  {
+		isControllable = false;
+		audioSource.Stop();
+		audioSource.PlayOneShot(successSFX);
+
+		GetComponent<Movement>().enabled = false;
+    Invoke("GoToNextLevel", delay);
+  }
+
   private void StartCrashSequence()
   {
-    throw new NotImplementedException();
+		isControllable = false;
+		audioSource.Stop();
+		audioSource.PlayOneShot(crashSFX);
+
+		GetComponent<Movement>().enabled = false;
+    Invoke("ReloadLevel", delay);
   }
 
   void ReloadLevel()
