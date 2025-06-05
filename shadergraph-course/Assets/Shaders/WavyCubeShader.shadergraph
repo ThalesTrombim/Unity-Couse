@@ -1,0 +1,42 @@
+
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b3c258e1db26464fa28e57c1e833fd6, type: 3}
+  m_Name: WavyCubeShader
+  m_EditorClassIdentifier: 
+  serializedVersion: 6
+  m_GraphData:
+    m_SerializedVersion: 8
+    m_Graph:
+      m_Name: WavyCubeShader
+      m_Children:
+        - type: UnityEditor.ShaderGraph.PBRMasterNode
+          m_Guid: 2c286ce0-a4a2-4c6e-90a5-9024fe5a4a33
+          m_Name: PBR Master
+          m_Slots:
+            - {name: Position, id: 0, slotType: 1, value: 0}
+          m_GuidSerializedVersion: 1
+    m_Properties:
+      - m_Name: _Amplitude
+        m_ReferenceName: _Amplitude
+        m_Description: 
+        m_DefaultFloat: 0.2
+        m_Flags: 0
+        m_Value: 0.2
+        m_Type: 1
+      - m_Name: _Frequency
+        m_ReferenceName: _Frequency
+        m_Description: 
+        m_DefaultFloat: 3.0
+        m_Flags: 0
+        m_Value: 3.0
+        m_Type: 1
